@@ -55,9 +55,10 @@ export SYSTEM_SASS=1
 %py3_build
 
 %if %{with tests}
+# test_build_sass and test_output_style tests build libsass itself using network
 PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 \
 PYTHONPATH=$(echo $(pwd)/build-3/lib.*) \
-%{__python3} -m pytest sasstests.py
+%{__python3} -m pytest sasstests.py -k 'not test_build_sass and not test_output_style'
 %endif
 
 %if %{with doc}
