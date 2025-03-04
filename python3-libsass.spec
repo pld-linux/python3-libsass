@@ -13,6 +13,7 @@ Group:		Libraries
 #Source0Download: https://github.com/sass/libsass-python/releases
 Source0:	https://github.com/sass/libsass-python/archive/%{version}/libsass-python-%{version}.tar.gz
 # Source0-md5:	3d628c3b4c1aff475db694b48de1f322
+Patch0:		libsass-python-sphinx-extlinks.patch
 URL:		https://sass-lang.com/libsass-python
 BuildRequires:	libstdc++-devel >= 6:4.7
 BuildRequires:	python3 >= 1:3.8
@@ -49,6 +50,7 @@ Dokumentacja API modułu Pythona sass.
 
 %prep
 %setup -q -n libsass-python-%{version}
+%patch -P0 -p1
 
 %build
 export SYSTEM_SASS=1
