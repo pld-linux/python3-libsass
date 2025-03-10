@@ -7,7 +7,7 @@ Summary:	Sass for Python: A straightforward binding of libsass for Python
 Summary(pl.UTF-8):	Sass dla Pythona - bezpośrednie wiązanie libsass dla Pythona
 Name:		python3-libsass
 Version:	0.23.0
-Release:	1
+Release:	2
 License:	MIT
 Group:		Libraries
 #Source0Download: https://github.com/sass/libsass-python/releases
